@@ -1,8 +1,11 @@
-import express, { application } from "express";
+//const express = require("express");
+import express from "express";
 import dotenv from "dotenv";
-import conectarDB from "./config/db";
-import usuarioRoutes from './routes/usuarioRoutes';
-import proyectoRoutes from './routes/proyectoRoutes';
+import cors from "cors";
+import conectarDB from "./config/db.js";
+import usuarioRoutes from './routes/usuarioRoutes.js';
+import proyectoRoutes from './routes/proyectoRoutes.js';
+
 
 const app = express();
 app.use(express.json());
@@ -11,14 +14,29 @@ dotenv.config();
 
 conectarDB();
 
-app.use("/api/usuarios", usuarioRoutes);
-app.use("/api/proyectos", proyectoRoutes);
+// Configurar CORS
+const whitelist = ['http://localhost:5174', 'http://localhost:5173'];
 
+const corsOption = {
+    origin: function(origin, callback){
+        if(whitelist.includes(origin) || !origin){
+            // puede consultar la API
+            callback(null, true);
+        }else{
+            // No esta permitido
+            callback(new Error("Error de Cors"));
+        }
+    },
+};
 
-const PORT = process.env.PORT || 40000;
+app.use(cors(corsOption));
 
-app.listen(PORT, ()=> {
+// Routing
+app.use('/api/usuarios', usuarioRoutes);
+app.use('/api/proyectos', proyectoRoutes);
+
+const PORT = process.env.PORT || 7500;
+
+app.listen(PORT, () => {
     console.log(`Servidor corriendo en el puerto ${PORT}`);
-
-
-});
+})
