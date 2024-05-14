@@ -1,0 +1,502 @@
+.navbar {
+  height: 90px; /* Cambia el valor según tus necesidades */
+
+}
+
+.navbar-brand{
+  color: #2a2d69 !important;
+  font-size: 35px !important;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif !important;
+ 
+  
+
+
+}
+
+.navbar-toggler {
+  position:relative;
+  margin-left: -10px;
+  
+   /* Ajusta la posición izquierda según tus necesidades */
+}
+  
+
+
+@media (max-width: 900px) {
+  .google-search-bar {
+    display: none !important; /* Oculta el campo de búsqueda */
+  }
+}
+.custom-input {
+  border-radius: 20px; /* Agrega esquinas redondeadas */
+  width: 500px;
+  margin-right: 50px;
+}
+
+/* Agregar márgenes a los iconos */
+@media (max-width: 600px) {
+  .fa-fw {
+    display: none !important; 
+  }
+  .location {
+    display: none !important; 
+    
+  }
+
+}
+
+.fa-fw {
+
+  font-size: 1.2em !important;
+  color: #2a2d69 !important;
+}
+
+
+.google-search-bar {
+  display: flex;
+  align-items: center;
+  border: 1px solid #dfe1e5; /* Cambia el color del borde según tu preferencia */
+  background-color: #ffffffff;
+  border-radius: 25px; /* Ajusta el radio de borde según tu preferencia */
+  padding: 10px 15px;
+  margin-right: 50px;
+  margin-left: -10px;
+  height: 40px;
+  width: 500px; /* Ajusta el ancho según tu preferencia */
+}
+
+.microphone-icon {
+  font-size: 15px;
+  color: #2a2d69; /* Cambia el color del ícono de micrófono según tu preferencia */
+  margin-right: 10px; /* Ajusta el espacio entre el ícono y el campo de entrada */
+}
+
+.location{
+  font-size: 20px;
+  color: #2a2d69; /* Cambia el color del ícono de micrófono según tu preferencia */
+
+
+}
+.search-icon {
+  font-size: 15px;
+  color: #2a2d69; /* Cambia el color del ícono de micrófono según tu preferencia */
+  margin-right: 10px; /* Ajusta el espacio entre el ícono y el campo de entrada */
+}
+.search-input {
+  border: none;
+  flex: 1;
+  padding: 0;
+  margin: 0;
+  font-size: 16px;
+  outline: none; /* Elimina el borde de enfoque al hacer clic en el campo */
+}
+
+.side-menu {
+  background-color: #22245a; /* Color de fondo del menú */
+  position: absolute;
+  margin: 0;
+  top: 0; /* Ajusta la distancia desde la parte superior según tus necesidades */
+  left: 0;
+  width: 250px; /* Ajusta el ancho del menú lateral según tus necesidades */
+  height: 100%; /* El menú ocupa el espacio restante de la pantalla */
+  z-index: 998; /* Asegura que el menú esté en frente de otros elementos */
+
+  /* Transiciones para suavizar los cambios al pasar el ratón */
+  transition: background-color 4s;
+}
+
+
+
+.side-menu-list  {
+list-style:none; 
+  margin-top: 0px;
+  margin-left: -30px;
+  color: #ffffff;
+}
+
+.side-menu-item  {
+ color: #ffffff;
+  display:flexbox;
+  align-items:normal;
+  padding: 15px;
+  transition: background-color 0.454  s;
+  
+}
+
+.side-menu-item:hover {
+  background-color: #4b5dbe; /* Color de fondo al pasar el ratón sobre el ítem */
+  cursor:pointer;
+}
+.side-menu-link:hover {
+  color: #ffffff;
+}
+.menu-header {
+ top: 0;
+  padding: 10px;
+
+  /* Otros estilos según tus necesidades */
+}
+
+.side-menu-link {
+  color: #ffffff;
+  text-decoration:double;
+}
+.custom-link {
+  color: #ffffff !important;
+  text-decoration:double !important;}
+
+/* Estilo adicional para el botón de hamburguesa */
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background:rgba(0, 0, 0, 0.797);
+  z-index: 998; /* Asegura que la capa esté detrás del menú */
+  
+}
+/* Estilo adicional para el botón de hamburguesa cuando está activo */
+
+/* Estilo adicional para el botón de hamburguesa cuando está activo */
+
+.close-button {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  font-size: 24px;
+  cursor: pointer;
+  background-color: #2a2d69; /* Color de fondo */
+  color: #ffffff; /* Color del texto */
+  border: none;
+  border-radius: 20%; /* Botón redondo */
+  width: 36px;
+  height: 36px;
+  text-align: center;
+  line-height: 36px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.close-button:hover {
+  background-color: #ffffff; /* Color de fondo al pasar el mouse */
+  color: #2a2d69; /* Color del texto al pasar el mouse */
+}
+.carousel-caption h5 {
+  color: black; /* Cambiar el color del título a negro */
+}
+
+.carousel-caption p {
+  color: black; /* Cambiar el color del párrafo a negro */
+}
+
+
+.carousel-indicators .active {
+
+  /* Cambiar el color del fondo del indicador activo */
+  background-color: #2a2d69 !important; /* Color de fondo del indicador activo */
+  color: #2a2d69 !important;
+}
+/* Cambia el color de las flechas */
+.carousel-control-prev-icon{
+  filter:invert(1);
+margin-right: 70px;
+}
+.carousel-control-next-icon {
+filter:invert(1);
+margin-left: 70px;
+
+}
+
+#template-mo-zay-hero-carousel{
+  background-color: #00000021;
+  
+}
+.logo-tougle{
+  display: flex;
+  margin-left: 60px;
+  padding: 5px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  
+}
+
+.rounded-circle {
+  width: 200px !important; /* Establece el ancho fijo del círculo */
+  height: 180px !important; /* Establece la altura fija del círculo */
+  object-fit: cover !important; /* Asegura que la imagen se ajuste al círculo sin deformarse */
+  transition: transform 0.3s; /* Agrega una transición suave */
+
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); 
+}
+
+
+
+
+.rounded-circle:hover {
+  transform: scale(1.1); /* Aumenta el tamaño al 110% en el hover */
+}
+
+.iconos-about{
+  color:#2a2d69 !important;
+  
+}
+.bg-success{
+  background-color: #4b5dbe !important;
+  
+}
+
+.img-fluid{
+  height: 400px;
+  width: 400px;
+  object-fit: cover !important; /* Asegura que la imagen se ajuste al círculo sin deformarse */
+
+}
+.img-fluid-hola{
+  height: 400px;
+  width: 400px;
+transform: scale(0.9); /* Escala la imagen al 80% del tamaño original */
+}
+
+
+
+/* Typography */
+body, ul, li, p, label, input, div {
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 15px !important;
+  font-weight: 300 !important;
+}
+
+.h1 {
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, ;
+  font-size: 70px !important;
+  font-weight: 200 !important;
+}
+.h2 {
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 40px !important;
+  font-weight: 300;
+}
+.h3 {
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 32px !important;
+}
+.login-dialog {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.74); /* Fondo negro semitransparente */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999; 
+}
+
+.login-content {
+  background: white;
+  padding: 20px;
+  border-radius: 15px;
+  text-align: center;
+  
+  width: 500px;
+  height: 500px;
+}
+
+h2 {
+  font-size: 24px;
+  margin-top: 10px;
+}
+
+.message {
+  font-size: 16px;
+  margin-top: 20px;
+}
+
+.signup-button {
+  background: #0074d9;
+  color: white;
+  border: none;
+  width: 80%;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  margin: 20px 0;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); 
+
+  
+}
+
+.login-input {
+  margin: 10px 0;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 80%;
+}
+
+.login-button {
+  background: #333;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  margin-top: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); 
+
+  width: 60%;
+  align-items: center;
+  justify-content: center;
+}
+
+.forgot-password {
+  margin-top: 10px;
+}
+
+.create-account {
+  margin-top: 10px;
+}
+.line {
+  display: inline-block;
+  width: 120px; /* Ancho de la línea */
+  height: 1px; /* Altura de la línea */
+  background-color: #00000059; /* Color de la línea (puedes ajustarlo según tu preferencia) */
+  margin: 0 10px; /* Espacio entre el texto y las líneas */
+  vertical-align: middle; /* Alineación vertical con el texto */
+}
+
+.icon {
+  margin-right: 10px; /* Espacio entre el icono y el texto */
+}
+
+.text-decoration-none{
+  color: white ;
+}
+
+/*Texto Footer */
+
+.text-light{
+  font-size: 30px !important;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif !important;
+  color: #2a2d69 !important;
+}
+
+.border-bottom {
+  border-color:#ffffff13 !important;
+  
+}
+.border-top {
+  border-color:#ffffff13 !important;
+}
+.text-decoration-none{
+  font-size: 15px !important;
+  
+}
+.ul-footer{
+  height: 400px !important;
+}
+
+.list-inline-item {
+  font-size: 25px !important;
+  margin: 15px;
+  margin-top: -5px;
+}
+.icon-footer{
+  color: #ffffff;
+  margin-right: 10px;
+  
+}
+.icon-footer:hover{
+  color: #2a2d69;
+}
+.list-footer{
+margin: 10px!important;
+}
+/* Añade estos estilos en tu archivo CSS o en línea en el archivo JS que usa este componente */
+.container-fluid {
+  padding: 20px;
+  background-color: #00000021;
+  display:flex ;
+  align-items:first baseline;
+  max-width: 100%;
+  
+  
+}
+
+.section-title {
+  font-size: 18px;
+}
+
+.bg-light {
+  background-color: white!important;
+  
+  padding: 15px;
+}
+
+.custom-checkbox {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.custom-control-input:checked ~ .custom-control-label::before {
+  border-color: #007bff;
+  background-color: #007bff;
+}
+
+.custom-control-label::before {
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+.custom-control-label {
+  display: flex;
+  align-items: center;
+}
+
+.badge {
+  font-size: 10px;
+  color: #232323;
+  padding: 5px 10px;
+  border-radius: 3px;
+  font-weight:normal;
+}
+
+
+.pb-3{
+margin-top: 30px;
+
+}
+
+.col-lg-4 {
+  flex: 0 0 100%; /* 25% de ancho máximo */
+  margin: 20px
+
+}
+
+
+.col-13{
+  
+  width: 100%;
+  height: fit-content;
+  margin: 0;
+}
+.buttons{
+  margin-top: 30px;
+
+}
+
+.flexi{
+  display: flex !important;
+  
+}
+
+.row{
+  display: flex !important;
+}
