@@ -26,7 +26,7 @@ const Login = ({ isOpen, onClose, setIsLoggedIn }) => {
   const handleLogin = async () => {
     try {
       const response = await axios.post('http://localhost:7500/api/usuarios/login', { email, password });
-      alert('Registro exitoso');
+      alert('acceso exitoso');
       setIsLoggedIn(true);
       onClose();
       console.log(response.data); // Manejar la respuesta del backend
@@ -81,7 +81,7 @@ const Login = ({ isOpen, onClose, setIsLoggedIn }) => {
 
         <button className="login-button" onClick={handleLogin}>Iniciar sesión</button>
         <div className="forgot-password">
-          <a href="#">¿Olvidaste tu contraseña?</a>
+          <Link to="/olvide-password">¿Olvidaste tu contraseña?</Link>
         </div>
         <div className="create-account">
           ¿No tienes una cuenta? <Link to="/Register">Crear aquí</Link>

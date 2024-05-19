@@ -6,6 +6,7 @@ import SectionOffert from './Components/SectionOffert';
 import Cart from './Components/ShoppingCart'
 import Register from './Components/Register';
 import UserProfile from './Components/UserProfile';
+import ResetPassword from './Components/ResetPassword';
 
 import Shop from './Components/Shop'
 import Shop2 from './Components/Shop2'
@@ -37,6 +38,7 @@ function App() {
   return (
     <>
       <Routes>
+      <Route path="/olvide-password" element={<ResetPassword />} />
       <Route path="/userProfile" element={<UserProfile />} />
       <Route path="/register" element={<Register />} />
       <Route path='/' element={<><Navbar /> <Slider /> <Categorys id="section" /> <SectionOffert  /> <Footer/></>}></Route>

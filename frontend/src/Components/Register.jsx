@@ -2,6 +2,7 @@ import axios from 'axios';
 import React from 'react';
 import { useState } from 'react';
 import { FaUser } from 'react-icons/fa';
+import { useNavigate } from 'react-router-dom';
 
 
 const Register = () => {
@@ -11,13 +12,16 @@ const Register = () => {
     const [password, setPassword] = useState('');
     const [message, setMessage] = useState('');
     const [isSuccess, setIsSuccess] = useState(false);
+    const navigate = useNavigate();
 
     const handleRegister = async (e) => {
         e.preventDefault();
         try {
           const response = await axios.post('http://localhost:7500/api/usuarios/registrar', { nombre: username, email, password });
-          console.log(response.data); // Manejar la respuesta del backend
+          alert('Registro exitoso');
+          console.log(response.data); 
           setIsSuccess(true);
+          navigate('/'); 
         } catch (error) {
             if (error.response && error.response.data && error.response.data.msg) {
                 setMessage(error.response.data.msg);

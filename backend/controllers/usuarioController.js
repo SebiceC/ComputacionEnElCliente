@@ -1,6 +1,7 @@
 import Usuario from "../models/Usuario.js";
 import generarId from "../helpers/generarId.js";
 import generarJWT from "../helpers/generarJWT.js";
+import transporter from "../config/emailConfig.js";
 
 const registrar = async (req, res) => {
     const {email} = req.body;
@@ -85,11 +86,28 @@ const olvidePassword = async (req, res) => {
     try {
         usuario.token = generarId();
         await usuario.save();
-        res.json({ msg: "Hemos enviado un corre con las instrucciones" })
+
+        const resetUrl = `http://localhost:5173/olvide-password/${usuario.token}`;
+        const mailOptions = {
+            from: process.env.EMAIL_USER,
+            to: usuario.email,
+            subject: 'Password Reset',
+            html: `<p>To reset your password, click the following link:</p><a href="${resetUrl}">Reset Password</a>`
+        }; 
+
+        transporter.sendMail(mailOptions, (error, info) => {
+            if (error) {
+                console.log(error);
+                return res.status(500).json({ msg: 'Error sending email' });
+            }
+            res.json({ msg: 'Hemos enviado un email con las instrucciones' });
+        });
     } catch (error) {
         console.log(error);
+        return res.status(500).json({ msg: "Hubo un error, intenta nuevamente" });
     }
 };
+
 
 const comprobarToken = async (req, res) => {
     const { token } = req.params;
