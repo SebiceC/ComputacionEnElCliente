@@ -5,15 +5,16 @@ import 'font-awesome/css/font-awesome.min.css';
 import logo from '../assets/vector.svg';
 import logowhite from '../assets/logo.svg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCartShopping, faMicrophone, faSearch, faUser, faHouse, faLocationDot } from '@fortawesome/free-solid-svg-icons';
-import { Link } from 'react-router-dom';
-import { Outlet} from 'react-router-dom';
+import { faCartShopping, faMicrophone, faSearch, faUser, faHouse, faLocationDot, faUserCircle } from '@fortawesome/free-solid-svg-icons';
+import { Link, Outlet } from 'react-router-dom';
+
 
 
 
 const NavBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -87,16 +88,23 @@ const NavBar = () => {
     </div>
 
     <Link to="/" className="nav-icon position-relative text-decoration-none">
-        <FontAwesomeIcon icon={faHouse} className="fa-fw text-dark mr-3" />
+      <FontAwesomeIcon icon={faHouse} className="fa-fw text-dark mr-3" />
+    </Link>
+
+    {isLoggedIn ? (
+      <Link className="nav-icon position-relative text-decoration-none" to="/userProfile">
+        <FontAwesomeIcon icon={faUserCircle} className="fa-fw text-dark mr-3" />
       </Link>
-      <Link  className="nav-icon position-relative text-decoration-none" onClick={() => setIsModalOpen(true)}>
-        <FontAwesomeIcon icon={faUser} className="fa-fw text-dark mr-3" />
-      </Link>
+      ) : (
+        <Link className="nav-icon position-relative text-decoration-none" onClick={() => setIsModalOpen(true)}>
+          <FontAwesomeIcon icon={faUser} className="fa-fw text-dark mr-3" />
+        </Link>
+    )}
       <Link to="/Cart" className="nav-icon position-relative text-decoration-none">
         <FontAwesomeIcon icon={faCartShopping} className="fa-fw text-dark mr-3" />
       </Link>
           </div>
-      <Login isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}></Login>
+      <Login isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} setIsLoggedIn={setIsLoggedIn} ></Login>
       <Outlet/>
     </nav>
     

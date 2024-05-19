@@ -14,7 +14,7 @@ import {
 
 import checkAuth from "../middleware/checkAuth.js";
 
-router.post('/', registrar);
+router.post('/registrar', registrar);
 router.post('/login', autenticar);
 router.get('/confirmar/:token', confirmar);
 router.post('/olvide-password', olvidePassword);

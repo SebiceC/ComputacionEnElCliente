@@ -15,16 +15,16 @@ dotenv.config();
 conectarDB();
 
 // Configurar CORS
-const whitelist = ['http://localhost:5174', 'http://localhost:5173'];
+const whitelist = ['http://localhost:5174', 'http://localhost:5173', 'http://localhost:7500'];
 
 const corsOption = {
     origin: function(origin, callback){
-        if(whitelist.includes(origin) || !origin){
+        if(whitelist.includes(origin) !== -1 || !origin){
             // puede consultar la API
             callback(null, true);
         }else{
             // No esta permitido
-            callback(new Error("Error de Cors"));
+            callback(new Error("No permitido por CORS"));
         }
     },
 };

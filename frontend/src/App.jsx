@@ -1,10 +1,11 @@
-import React, {useEffect, useState } from 'react';
 import Navbar from './Components/NavBar';
 import Slider from './Components/Slider';
 import Aboutus from './Components/AboutUs';
 import Categorys from './Components/Categorys';
 import SectionOffert from './Components/SectionOffert';
 import Cart from './Components/ShoppingCart'
+import Register from './Components/Register';
+import UserProfile from './Components/UserProfile';
 
 import Shop from './Components/Shop'
 import Shop2 from './Components/Shop2'
@@ -31,58 +32,13 @@ import Footer from './Components/Footer';
 
 
 function App() {
-
-  const [data, setData] = useState('');
-  const [error, setError] = useState('');
-  
-  useEffect(() => {
-    // fetch('http://localhost:7500/api/usuarios')
-    // .then(response => response.text())
-    // .then(data => setData(data));
-  // }, [])
-  const fetchData = async () => {
-    try {
-      const response = await fetch('http://localhost:7500/api/usuarios', {
-        method: 'GET',
-        headers: {
-          'Content-Type': 'application/json',
-          // Asegúrate de enviar cualquier token necesario aquí si la ruta está protegida
-          // 'Authorization': 'Bearer ' + token
-        },
-      });
-
-      if (!response.ok) {
-        throw new Error('Network response was not ok ' + response.statusText);
-      }
-
-      const data = await response.json();
-      setData(data);
-    } catch (error) {
-      setError('Failed to fetch data: ' + error.message);
-    }
-  };
-
-  fetchData();
-  }, []);
   
 
   return (
     <>
-     
-      <div className="App">
-        <header className="App-header">
-          <p>Data from backend: {data}</p>
-        </header>
-      </div>
-
-      <div className="App">
-        <h1>Perfil de Usuario</h1>
-          {data ? <pre>{JSON.stringify(data, null, 2)}</pre> : <p>No data fetched</p>}
-          {error && <p style={{ color: 'red' }}>{error}</p>}
-      </div>
-
-      
       <Routes>
+      <Route path="/userProfile" element={<UserProfile />} />
+      <Route path="/register" element={<Register />} />
       <Route path='/' element={<><Navbar /> <Slider /> <Categorys id="section" /> <SectionOffert  /> <Footer/></>}></Route>
       <Route path='/Cart' element={<Cart />}></Route>
       <Route path='/aboutus' element={<Aboutus />}></Route>
