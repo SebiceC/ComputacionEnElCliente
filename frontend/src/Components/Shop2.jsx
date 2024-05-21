@@ -1,4 +1,7 @@
 import NavBar from "./NavBar";
+import  { useEffect, useState } from 'react';
+import axios from 'axios';
+
 import {FaShoppingCart} from 'react-icons/fa';
 import { Link } from "react-router-dom";
 import producto1 from '../img/aromatizante1.jpg';
@@ -8,6 +11,18 @@ import producto4 from '../img/sofa1.jpg';
 
 
 const ShopFilter = () => {
+  const [productos, setProductos] = useState([]);
+
+  useEffect(() => {
+      const fetchProductos = async () => {
+          const { data } = await axios.get('http://localhost:7500/api/productos');
+          setProductos(data);
+      };
+
+      fetchProductos();
+  }, []);
+
+  
   return (
 <div>
     <NavBar/>
@@ -153,18 +168,23 @@ const ShopFilter = () => {
   
   </div>
 
-        {/* Product Items */}
-        <div className="col-lg-6 col-md-6 col-sm-6 pb-3">
-  <div className="product-item bg-light mb-4" style={{ width: '100%', height: '95%' }}>
-    <div className="product-img position-relative overflow-hidden text-center">
-    <Link to='/ProductDetail2'> <img className="img-fluid" src={producto1} alt="" style={{ maxWidth: '80%', maxHeight: '60%', display: 'inline-block' }} /></Link>
-    </div>
-    <div className="text-center py-4">
-      <h5 className="h5 text-truncate">Aromatizante</h5>
-      <div className="d-flex align-items-center justify-content-center mt-3">
-        <h5>$6.000</h5>
-      </div>
-      <div className="d-flex align-items-center justify-content-center mt-3">
+  <div className="container">
+            <div className="row">
+
+                  {productos.slice(4, 8).map((producto, index) => (
+                    <div key={producto._id} className="col-lg-6 col-md-6 col-sm-6 pb-3">
+                        <div className="product-item bg-light mb-4" style={{ width: '100%', height: '95%' }}>
+                            <div className="product-img position-relative overflow-hidden text-center">
+                                <Link to={`/producto/${producto._id}`}>
+                                    <img className="img-fluid" src={index === 0 ? producto1 : index === 1 ? producto2 : index === 2 ? producto3 : producto4} alt={producto.nombre} style={{ maxWidth: '80%', maxHeight: '60%', display: 'inline-block' }} />
+                                </Link>
+                            </div>
+                            <div className="text-center py-4">
+                                <h5 className="h5 text-truncate">{producto.nombre}</h5>
+                                <div className="d-flex align-items-center justify-content-center mt-3">
+                                    <h5>${producto.precio}</h5>
+                                </div>
+                                <div className="d-flex align-items-center justify-content-center mt-3">
         
         {/* Estrellas más grandes y amarillas */}
         <small className="fa fa-star text-warning mr-1" style={{ fontSize: '1.5em' }}></small>
@@ -173,95 +193,17 @@ const ShopFilter = () => {
         <small className="fa fa-star text-warning mr-1" style={{ fontSize: '1.5em' }}></small>
         <small className="fa fa-star text-warning mr-1" style={{ fontSize: '1.5em' }}></small>
       </div>
-      
-      <div className="d-flex align-items-center justify-content-center mb-3">
-        {/* Agregando el botón con mayor ancho */}
-        <button className="btn btn-primary btn-shadow " style={{ width: '170px', margin:'20px' }}>Agregar<FaShoppingCart className='icon-footer '  style={{  marginLeft:'20px' }}/></button>
-      </div>
-    </div>
-  </div>
-</div>
-<div className="col-lg-6 col-md-6 col-sm-6 pb-3">
-  <div className="product-item bg-light mb-4" style={{ width: '100%', height: '95%' }}>
-    <div className="product-img position-relative overflow-hidden text-center">
-      <img className="img-fluid" src={producto2} alt="" style={{ maxWidth: '80%', maxHeight: '60%', display: 'inline-block' }} />
-    </div>
-    <div className="text-center py-4">
-      <h5 className="h5 text-truncate">Reloj De Pared</h5>
-      <div className="d-flex align-items-center justify-content-center mt-3">
-        <h5>$123.00</h5>
-      </div>
-      <div className="d-flex align-items-center justify-content-center mt-3">
-        
-        {/* Estrellas más grandes y amarillas */}
-        <small className="fa fa-star text-warning mr-1" style={{ fontSize: '1.5em' }}></small>
-        <small className="fa fa-star text-warning mr-1" style={{ fontSize: '1.5em' }}></small>
-        <small className="fa fa-star text-warning mr-1" style={{ fontSize: '1.5em' }}></small>
-        <small className="fa fa-star text-warning mr-1" style={{ fontSize: '1.5em' }}></small>
-        <small className="fa fa-star text-warning mr-1" style={{ fontSize: '1.5em' }}></small>
-      </div>
-      
-      <div className="d-flex align-items-center justify-content-center mb-3">
-        {/* Agregando el botón con mayor ancho */}
-        <button className="btn btn-primary btn-shadow " style={{ width: '170px', margin:'20px' }}>Agregar<FaShoppingCart className='icon-footer '  style={{  marginLeft:'20px' }}/></button>
-      </div>
-    </div>
-  </div>
-</div>
-<div className="col-lg-6 col-md-6 col-sm-6 pb-3">
-  <div className="product-item bg-light mb-4" style={{ width: '100%', height: '95%' }}>
-    <div className="product-img position-relative overflow-hidden text-center">
-      <img className="img-fluid" src={producto3} alt="" style={{ maxWidth: '80%', maxHeight: '60%', display: 'inline-block' }} />
-    </div>
-    <div className="text-center py-4">
-      <h5 className="h5 text-truncate">Portaretrato</h5>
-      <div className="d-flex align-items-center justify-content-center mt-3">
-        <h5>$123.00</h5>
-      </div>
-      <div className="d-flex align-items-center justify-content-center mt-3">
-        
-        {/* Estrellas más grandes y amarillas */}
-        <small className="fa fa-star text-warning mr-1" style={{ fontSize: '1.5em' }}></small>
-        <small className="fa fa-star text-warning mr-1" style={{ fontSize: '1.5em' }}></small>
-        <small className="fa fa-star text-warning mr-1" style={{ fontSize: '1.5em' }}></small>
-        <small className="fa fa-star text-warning mr-1" style={{ fontSize: '1.5em' }}></small>
-        <small className="fa fa-star text-warning mr-1" style={{ fontSize: '1.5em' }}></small>
-      </div>
-      
-      <div className="d-flex align-items-center justify-content-center mb-3">
-        {/* Agregando el botón con mayor ancho */}
-        <button className="btn btn-primary btn-shadow " style={{ width: '170px', margin:'20px' }}>Agregar<FaShoppingCart className='icon-footer '  style={{  marginLeft:'20px' }}/></button>
-      </div>
-    </div>
-  </div>
-</div>
-<div className="col-lg-6 col-md-6 col-sm-6 pb-3">
-  <div className="product-item bg-light mb-4" style={{ width: '100%', height: '95%' }}>
-    <div className="product-img position-relative overflow-hidden text-center">
-      <img className="img-fluid" src={producto4} alt="" style={{ maxWidth: '80%', maxHeight: '60%', display: 'inline-block' }} />
-    </div>
-    <div className="text-center py-4">
-      <h5 className="h5 text-truncate">Sofá</h5>
-      <div className="d-flex align-items-center justify-content-center mt-3">
-        <h5>$123.00</h5>
-      </div>
-      <div className="d-flex align-items-center justify-content-center mt-3">
-        
-        {/* Estrellas más grandes y amarillas */}
-        <small className="fa fa-star text-warning mr-1" style={{ fontSize: '1.5em' }}></small>
-        <small className="fa fa-star text-warning mr-1" style={{ fontSize: '1.5em' }}></small>
-        <small className="fa fa-star text-warning mr-1" style={{ fontSize: '1.5em' }}></small>
-        <small className="fa fa-star text-warning mr-1" style={{ fontSize: '1.5em' }}></small>
-        <small className="fa fa-star text-warning mr-1" style={{ fontSize: '1.5em' }}></small>
-      </div>
-      
-      <div className="d-flex align-items-center justify-content-center mb-3">
-        {/* Agregando el botón con mayor ancho */}
-        <button className="btn btn-primary btn-shadow " style={{ width: '170px', margin:'20px' }}>Agregar<FaShoppingCart className='icon-footer '  style={{  marginLeft:'20px' }}/></button>
-      </div>
-    </div>
-  </div>
-</div>
+                                <div className="d-flex align-items-center justify-content-center mb-3">
+                                    <button className="btn btn-primary btn-shadow" style={{ width: '170px', margin: '20px' }}>
+                                        Agregar<FaShoppingCart className='icon-footer' style={{ marginLeft: '20px' }} />
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                ))}
+            </div>
+        </div>
 
         {/* Pagination */}
         <div className="col-12">

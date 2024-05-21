@@ -1,0 +1,264 @@
+[
+  {
+      "nombre": "Sartén-X",
+      "precio": 45000,
+      "descripcion": "Sartén antiadherente de 28 cm con mango ergonómico.",
+      "marca": "CocinaPlus",
+      "especificaciones": "Material: Aluminio, Diámetro: 28 cm, Peso: 1.2 kg",
+      "colores_disponibles": ["Negro", "Rojo"],
+      "img": "../img/sarten1.jpg"
+      
+  },
+  {
+      "nombre": "Juego de Pocillos",
+      "precio": 35000,
+      "descripcion": "Set de 6 pocillos de cerámica con diseños modernos.",
+      "marca": "HogarYEstilo",
+      "especificaciones": "Material: Cerámica, Capacidad: 250 ml cada uno, Apto para lavavajillas",
+      "colores_disponibles": ["Blanco", "Azul", "Verde"]
+  },
+  {
+      "nombre": "Tabla de Cocina",
+      "precio": 20000,
+      "descripcion": "Tabla de cocina de bambú, resistente y duradera.",
+      "marca": "EcoChef",
+      "especificaciones": "Material: Bambú, Dimensiones: 30 x 20 cm, Peso: 800 g",
+      "colores_disponibles": ["Madera natural"]
+  },
+  {
+      "nombre": "Juego de Cubiertos",
+      "precio": 60000,
+      "descripcion": "Juego de cubiertos de acero inoxidable para 6 personas.",
+      "marca": "DiningPro",
+      "especificaciones": "Material: Acero inoxidable, Incluye: 24 piezas, Apto para lavavajillas",
+      "colores_disponibles": ["Plateado"]
+  },
+  {
+      "nombre": "Aromatizante",
+      "precio": 15000,
+      "descripcion": "Aromatizante ambiental en spray con fragancia a lavanda.",
+      "marca": "AromaFresh",
+      "especificaciones": "Capacidad: 300 ml, Duración: Hasta 60 días",
+      "colores_disponibles": ["Transparente"]
+  },
+  {
+      "nombre": "Reloj de Pared",
+      "precio": 40000,
+      "descripcion": "Reloj de pared con diseño minimalista y silencioso.",
+      "marca": "TimeDecor",
+      "especificaciones": "Material: Plástico, Diámetro: 35 cm, Batería: 1x AA (no incluida)",
+      "colores_disponibles": ["Blanco", "Negro", "Gris"]
+  },
+  {
+      "nombre": "Portarretrato",
+      "precio": 25000,
+      "descripcion": "Portarretrato de madera para fotos de 10x15 cm.",
+      "marca": "Memories",
+      "especificaciones": "Material: Madera, Tamaño: 10 x 15 cm, Tipo: Vertical y horizontal",
+      "colores_disponibles": ["Madera natural", "Blanco", "Negro"]
+  },
+  {
+      "nombre": "Sofá",
+      "precio": 1200000,
+      "descripcion": "Sofá de tres plazas con cojines incluidos y tela resistente.",
+      "marca": "ConfortHome",
+      "especificaciones": "Material: Tela, Estructura: Madera, Dimensiones: 200 x 90 x 85 cm",
+      "colores_disponibles": ["Gris", "Azul", "Beige"]
+  },
+  
+    {
+        "nombre": "Cepillo-Loco",
+        "precio": 12000,
+        "descripcion": "Cepillo de dientes con cerdas suaves y diseño ergonómico.",
+        "marca": "DentalCare",
+        "especificaciones": "Material: Plástico y nylon, Tamaño: Mediano",
+        "colores_disponibles": ["Azul", "Rojo", "Verde", "Amarillo"]
+    },
+    {
+        "nombre": "Límpido",
+        "precio": 8000,
+        "descripcion": "Limpieza profunda para pisos y superficies, aroma a pino.",
+        "marca": "CleanMaster",
+        "especificaciones": "Capacidad: 1 litro, Uso: Doméstico y profesional",
+        "colores_disponibles": ["Verde"]
+    },
+    {
+        "nombre": "Detergente",
+        "precio": 15000,
+        "descripcion": "Detergente en polvo para ropa con fragancia floral.",
+        "marca": "LavaPlus",
+        "especificaciones": "Peso: 2 kg, Tipo: Multiuso, Rendimiento: 50 lavadas",
+        "colores_disponibles": ["Blanco"]
+    },
+    {
+        "nombre": "Escoba",
+        "precio": 10000,
+        "descripcion": "Escoba con cerdas duraderas y mango ergonómico.",
+        "marca": "SweepPro",
+        "especificaciones": "Material: Plástico y metal, Longitud: 1.2 metros",
+        "colores_disponibles": ["Rojo", "Azul", "Verde"]
+    },
+    {
+        "nombre": "Toalla de Baño",
+        "precio": 25000,
+        "descripcion": "Toalla de baño de algodón 100%, suave y absorbente.",
+        "marca": "ComfortTowels",
+        "especificaciones": "Material: Algodón, Tamaño: 70 x 140 cm",
+        "colores_disponibles": ["Blanco", "Azul", "Gris", "Rosa"]
+    },
+    {
+        "nombre": "Crema Dental",
+        "precio": 9000,
+        "descripcion": "Crema dental con flúor para dientes fuertes y encías sanas.",
+        "marca": "SmileBright",
+        "especificaciones": "Capacidad: 75 ml, Sabor: Menta",
+        "colores_disponibles": ["Blanco"]
+    },
+    {
+        "nombre": "Toallas Higiénicas",
+        "precio": 12000,
+        "descripcion": "Toallas higiénicas con alas, ultra delgadas y con máxima absorción.",
+        "marca": "ComfortCare",
+        "especificaciones": "Cantidad: 20 unidades, Tamaño: Regular",
+        "colores_disponibles": ["Blanco"]
+    },
+    {
+        "nombre": "Shampoo Arcoiris",
+        "precio": 18000,
+        "descripcion": "Shampoo para todo tipo de cabello con aroma a frutas.",
+        "marca": "HairGlow",
+        "especificaciones": "Capacidad: 400 ml, Uso: Diario",
+        "colores_disponibles": ["Transparente con colores"]
+    },
+    {
+        "nombre": "Coca Cola 3L",
+        "precio": 7500,
+        "descripcion": "Refresco gaseoso Coca Cola en presentación de 3 litros.",
+        "marca": "Coca Cola",
+        "especificaciones": "Capacidad: 3 litros, Sabor: Original",
+        "colores_disponibles": ["Rojo y negro"]
+    },
+    {
+        "nombre": "Detoditos",
+        "precio": 2500,
+        "descripcion": "Snack mixto de maíz, plátano y papa, sabor tradicional.",
+        "marca": "Detodito",
+        "especificaciones": "Peso: 165 g, Sabor: Tradicional",
+        "colores_disponibles": ["Multicolor"]
+    },
+    {
+        "nombre": "Leche Alpina",
+        "precio": 3200,
+        "descripcion": "Leche entera pasteurizada en presentación de 1 litro.",
+        "marca": "Alpina",
+        "especificaciones": "Capacidad: 1 litro, Tipo: Entera",
+        "colores_disponibles": ["Blanco"]
+    },
+    {
+        "nombre": "Torta Jet",
+        "precio": 1500,
+        "descripcion": "Mini torta de chocolate con relleno cremoso.",
+        "marca": "Jet",
+        "especificaciones": "Peso: 50 g, Sabor: Chocolate",
+        "colores_disponibles": ["Marrón"]
+    },
+    {
+        "nombre": "Comida para Perro",
+        "precio": 45000,
+        "descripcion": "Alimento balanceado para perros adultos de raza mediana.",
+        "marca": "DogChow",
+        "especificaciones": "Peso: 10 kg, Sabor: Pollo y vegetales",
+        "colores_disponibles": ["Verde"]
+    },
+    {
+        "nombre": "Cama para Mascota",
+        "precio": 70000,
+        "descripcion": "Cama acolchada y cómoda para mascotas de tamaño mediano.",
+        "marca": "PetComfort",
+        "especificaciones": "Material: Tela y espuma, Dimensiones: 80 x 60 cm",
+        "colores_disponibles": ["Gris", "Azul", "Rojo"]
+    },
+    {
+        "nombre": "Juguete para Mascotas",
+        "precio": 12000,
+        "descripcion": "Pelota de goma resistente para juegos y masticación.",
+        "marca": "PetFun",
+        "especificaciones": "Material: Goma, Diámetro: 10 cm",
+        "colores_disponibles": ["Rojo", "Verde", "Azul"]
+    },
+    {
+        "nombre": "Collar para Perro",
+        "precio": 15000,
+        "descripcion": "Collar ajustable para perros con hebilla de seguridad.",
+        "marca": "PetSafe",
+        "especificaciones": "Material: Nylon, Tamaño: Mediano",
+        "colores_disponibles": ["Negro", "Rojo", "Azul"]
+
+        },
+        {
+            "nombre": "Lámpara-X",
+            "precio": 45000,
+            "descripcion": "Lámpara de escritorio con luz LED y diseño moderno.",
+            "marca": "BrightLight",
+            "especificaciones": "Material: Plástico y metal, Potencia: 5W, Altura: 40 cm",
+            "colores_disponibles": ["Blanco", "Negro", "Azul"]
+        },
+        {
+            "nombre": "Impresora HP",
+            "precio": 250000,
+            "descripcion": "Impresora multifuncional HP con capacidad de impresión, escaneo y copia.",
+            "marca": "HP",
+            "especificaciones": "Modelo: DeskJet 2720, Conectividad: WiFi, USB, Velocidad: 7.5 ppm (negro), 5.5 ppm (color)",
+            "colores_disponibles": ["Blanco", "Negro"]
+        },
+        {
+            "nombre": "Kit de Lapiceros",
+            "precio": 12000,
+            "descripcion": "Set de 10 lapiceros de colores variados con tinta suave.",
+            "marca": "PaperMate",
+            "especificaciones": "Material: Plástico, Tipo: Bolígrafo, Colores: 10 colores",
+            "colores_disponibles": ["Multicolor"]
+        },
+        {
+            "nombre": "Computador",
+            "precio": 2000000,
+            "descripcion": "Computador portátil con procesador Intel Core i5 y 8GB de RAM.",
+            "marca": "Lenovo",
+            "especificaciones": "Pantalla: 15.6 pulgadas, Almacenamiento: 256GB SSD, Sistema operativo: Windows 10",
+            "colores_disponibles": ["Gris", "Negro"]
+        },
+        {
+            "nombre": "Biberón",
+            "precio": 15000,
+            "descripcion": "Biberón anticólico con capacidad de 250 ml.",
+            "marca": "BabyCare",
+            "especificaciones": "Material: Plástico libre de BPA, Tetina: Silicona, Capacidad: 250 ml",
+            "colores_disponibles": ["Transparente", "Azul", "Rosa"]
+        },
+        {
+            "nombre": "Pañitos Húmedos",
+            "precio": 8000,
+            "descripcion": "Pañitos húmedos para bebé con aloe vera y vitamina E.",
+            "marca": "BabySoft",
+            "especificaciones": "Cantidad: 80 unidades, Sin alcohol, Hipoalergénicos",
+            "colores_disponibles": ["Blanco"]
+        },
+        {
+            "nombre": "Juguete Bebé",
+            "precio": 25000,
+            "descripcion": "Juguete de peluche con sonidos y texturas para estimular al bebé.",
+            "marca": "PlayKids",
+            "especificaciones": "Material: Tela suave, Dimensiones: 20 cm de altura, Edad recomendada: 0+ meses",
+            "colores_disponibles": ["Multicolor"]
+        },
+        {
+            "nombre": "Conjunto de Ropa Bebé",
+            "precio": 35000,
+            "descripcion": "Conjunto de ropa para bebé de algodón 100%, incluye camiseta y pantalones.",
+            "marca": "BabyStyle",
+            "especificaciones": "Material: Algodón, Tallas: 0-3 meses, 3-6 meses, 6-12 meses",
+            "colores_disponibles": ["Blanco", "Rosa", "Azul"]
+        }
+]
+
+

@@ -5,6 +5,8 @@ import cors from "cors";
 import conectarDB from "./config/db.js";
 import usuarioRoutes from './routes/usuarioRoutes.js';
 import proyectoRoutes from './routes/proyectoRoutes.js';
+import productoRoutes from './routes/productoRoutes.js'; // Importa la ruta de productos
+
 
 
 const app = express();
@@ -34,6 +36,8 @@ app.use(cors(corsOption));
 // Routing
 app.use('/api/usuarios', usuarioRoutes);
 app.use('/api/proyectos', proyectoRoutes);
+app.use('/api/productos', productoRoutes); // Usa la ruta de productos
+
 
 const PORT = process.env.PORT || 7500;
 
