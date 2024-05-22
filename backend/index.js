@@ -4,7 +4,7 @@ import dotenv from "dotenv";
 import cors from "cors";
 import conectarDB from "./config/db.js";
 import usuarioRoutes from './routes/usuarioRoutes.js';
-import proyectoRoutes from './routes/proyectoRoutes.js';
+import comprasRoutes from './routes/comprasRoutes.js';
 import productoRoutes from './routes/productoRoutes.js'; // Importa la ruta de productos
 
 
@@ -17,7 +17,7 @@ dotenv.config();
 conectarDB();
 
 // Configurar CORS
-const whitelist = ['http://localhost:5174', 'http://localhost:5173', 'http://localhost:7500'];
+const whitelist = ['http://localhost:5174', 'http://localhost:5173', 'http://localhost:4000'];
 
 const corsOption = {
     origin: function(origin, callback){
@@ -35,11 +35,11 @@ app.use(cors(corsOption));
 
 // Routing
 app.use('/api/usuarios', usuarioRoutes);
-app.use('/api/proyectos', proyectoRoutes);
+app.use('/api/compras', comprasRoutes);
 app.use('/api/productos', productoRoutes); // Usa la ruta de productos
 
 
-const PORT = process.env.PORT || 7500;
+const PORT = process.env.PORT || 4000;
 
 app.listen(PORT, () => {
     console.log(`Servidor corriendo en el puerto ${PORT}`);

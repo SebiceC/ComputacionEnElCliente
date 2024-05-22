@@ -1,13 +1,14 @@
 
-
+import React from 'react';
 import { FaUser } from 'react-icons/fa';
 import axios from 'axios';
-import { useState } from 'react';
+import {  useState, useEffect  } from 'react';
 import { Link } from 'react-router-dom';
+
 
 // eslint-disable-next-line react/prop-types
 const Login = ({ isOpen, onClose, setIsLoggedIn }) => {
-
+  const [ session, setSession ] = useState([]);
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [message, setMessage] = useState('');
@@ -17,27 +18,44 @@ const Login = ({ isOpen, onClose, setIsLoggedIn }) => {
     return null;
   }
 
+  
+
   const handleOverlayClick = (e) => {
     if (e.target === e.currentTarget) {
       onClose(); // Cierra el modal si se hace clic en el fondo oscuro
     }
   };
 
-  const handleLogin = async () => {
+  const handleLogin = async (e) => {
+    e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:7500/api/usuarios/login', { email, password });
-      alert('acceso exitoso');
+      const response = await axios.post('http://localhost:4000/api/usuarios/login', { email, password });
+      
+      const session = {
+        id: response.data._id,
+        nombre: response.data.nombre,
+        email: response.data.email,
+      };
+      //setSession(session);
+
+      console.log(session); 
+
+      localStorage.setItem('session', JSON.stringify(session));
+
+      alert(response.data.msg);
+
       setIsLoggedIn(true);
+      window.location.reload();
       onClose();
-      console.log(response.data); // Manejar la respuesta del backend
+
     } catch (error) {
-      if (error.response && error.response.data && error.response.data.msg) {
-        setMessage(error.response.data.msg);
+      if (error.response.message) {
+        setMessage(error.response.message);
       } else {
         setMessage('Error al registrarse, verifica tus credenciales o confirma tu cuenta');
       }
       setIsSuccess(false);
-      console.error(error);
+      console.error(error.response.message);
     }
   };
 

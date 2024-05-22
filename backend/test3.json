@@ -1,0 +1,132 @@
+[
+    {
+      "_id": "664cab57de649a491dab0dfd",
+      "nombre": "Comida para Perro",
+      "precio": 45000,
+      "descripcion": "Alimento balanceado para perros adultos de raza mediana.",
+      "marca": "DogChow",
+      "especificaciones": "Peso: 10 kg, Sabor: Pollo y vegetales",
+      "colores_disponibles": ["Verde"],
+      "categoria": "mascotas"
+    },
+    {
+      "_id": "664cab57de649a491dab0dfe",
+      "nombre": "Cama para Mascota",
+      "precio": 70000,
+      "descripcion": "Cama acolchada y cómoda para mascotas de tamaño mediano.",
+      "marca": "PetComfort",
+      "especificaciones": "Material: Tela y espuma, Dimensiones: 80 x 60 cm",
+      "colores_disponibles": ["Gris", "Azul", "Rojo"],
+      "categoria": "mascotas"
+    },
+    {
+      "_id": "664cab57de649a491dab0dff",
+      "nombre": "Juguete para Mascotas",
+      "precio": 12000,
+      "descripcion": "Pelota de goma resistente para juegos y masticación.",
+      "marca": "PetFun",
+      "especificaciones": "Material: Goma, Diámetro: 10 cm",
+      "colores_disponibles": ["Rojo", "Verde", "Azul"],
+      "categoria": "mascotas"
+    },
+    {
+      "_id": "664cab57de649a491dab0e00",
+      "nombre": "Collar para Perro",
+      "precio": 15000,
+      "descripcion": "Collar ajustable para perros con hebilla de seguridad.",
+      "marca": "PetSafe",
+      "especificaciones": "Material: Nylon, Tamaño: Mediano",
+      "colores_disponibles": ["Negro", "Rojo", "Azul"],
+      "categoria": "mascotas"
+    },
+    {
+      "_id": "664cab57de649a491dab0e01",
+      "nombre": "Lámpara-X",
+      "precio": 45000,
+      "descripcion": "Lámpara de escritorio con luz LED y diseño moderno.",
+      "marca": "BrightLight",
+      "especificaciones": "Material: Plástico y metal, Potencia: 5W, Altura: 40 cm",
+      "colores_disponibles": ["Blanco", "Negro", "Azul"],
+      "categoria": "oficina"
+    },
+    {
+      "_id": "664cab57de649a491dab0e02",
+      "nombre": "Impresora HP",
+      "precio": 250000,
+      "descripcion": "Impresora multifuncional HP con capacidad de impresión, escaneo y copia.",
+      "marca": "HP",
+      "especificaciones": "Modelo: DeskJet 2720, Conectividad: WiFi, USB, Velocidad: 7.5 ppm (negro), 5.5 ppm (color)",
+      "colores_disponibles": ["Blanco", "Negro"],
+      "categoria": "oficina"
+    },
+    {
+      "_id": "664cab57de649a491dab0e03",
+      "nombre": "Kit de Lapiceros",
+      "precio": 12000,
+      "descripcion": "Set de 10 lapiceros de colores variados con tinta suave.",
+      "marca": "PaperMate",
+      "especificaciones": "Material: Plástico, Tipo: Bolígrafo, Colores: 10 colores",
+      "colores_disponibles": ["Multicolor"],
+      "categoria": "oficina"
+    },
+    {
+      "_id": "664cab57de649a491dab0e04",
+      "nombre": "Computador",
+      "precio": 2000000,
+      "descripcion": "Computador portátil con procesador Intel Core i5 y 8GB de RAM.",
+      "marca": "Lenovo",
+      "especificaciones": "Pantalla: 15.6 pulgadas, Almacenamiento: 256GB SSD, Sistema operativo: Windows 10",
+      "colores_disponibles": ["Gris", "Negro"],
+      "categoria": "oficina"
+    },
+    {
+      "_id": "664cab57de649a491dab0e05",
+      "nombre": "Biberón",
+      "precio": 15000,
+      "descripcion": "Biberón anticólico con capacidad de 250 ml.",
+      "marca": "BabyCare",
+      "especificaciones": "Material: Plástico libre de BPA, Tetina: Silicona, Capacidad: 250 ml",
+      "colores_disponibles": ["Transparente", "Azul", "Rosa"],
+      "categoria": "para tus hijos"
+    },
+    {
+        "_id": "664cab57de649a491dab0e06",
+        "nombre": "Ropa para bebe",
+        "precio": 15000,
+        "descripcion": "Ropa para chiquitin recien nacido",
+        "marca": "BabyCare",
+        "especificaciones": "Material: algodon",
+        "colores_disponibles": ["Azul", "Rosa"],
+        "categoria": "para tus hijos"
+    },
+    {
+        "_id": "664cab57de649a491dab0e07",
+        "nombre": "Chupo para bebes",
+        "precio": 15000,
+        "descripcion": "Chupo para chiquitin recien nacido",
+        "marca": "BabyCare",
+        "especificaciones": "Material: plastico",
+        "colores_disponibles": ["Azul", "Rosa"],
+        "categoria": "para tus hijos"
+    },
+    {
+        "_id": "664cab57de649a491dab0e08",
+        "nombre": "Ropa para bebe",
+        "precio": 15000,
+        "descripcion": "Ropa para chiquitin recien nacido",
+        "marca": "BabyCare",
+        "especificaciones": "Material: algodon",
+        "colores_disponibles": ["Azul", "Rosa"],
+        "categoria": "para tus hijos"
+    },
+    {
+        "_id": "664cab57de649a491dab0e09",
+        "nombre": "Babero para bebe",
+        "precio": 15000,
+        "descripcion": "Babero para chiquitin recien nacido",
+        "marca": "BabyCare",
+        "especificaciones": "Material: algodon",
+        "colores_disponibles": ["Azul", "Rosa"],
+        "categoria": "para tus hijos"
+    }
+]

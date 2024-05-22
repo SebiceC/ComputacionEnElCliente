@@ -1,0 +1,102 @@
+[
+    {
+      "_id": "664cab57de649a491dab0dfd",
+      "nombre": "Comida para Perro",
+      "precio": 45000,
+      "descripcion": "Alimento balanceado para perros adultos de raza mediana.",
+      "marca": "DogChow",
+      "especificaciones": "Peso: 10 kg, Sabor: Pollo y vegetales",
+      "colores_disponibles": ["Verde"],
+      "img": "src/img/comida_perro.jpg",
+      "categoria": "mascotas"
+    },
+    {
+      "_id": "664cab57de649a491dab0dfe",
+      "nombre": "Cama para Mascota",
+      "precio": 70000,
+      "descripcion": "Cama acolchada y cómoda para mascotas de tamaño mediano.",
+      "marca": "PetComfort",
+      "especificaciones": "Material: Tela y espuma, Dimensiones: 80 x 60 cm",
+      "colores_disponibles": ["Gris", "Azul", "Rojo"],
+      "img": "src/img/cama_mascota.jpg",
+      "categoria": "mascotas"
+    },
+    {
+      "_id": "664cab57de649a491dab0dff",
+      "nombre": "Juguete para Mascotas",
+      "precio": 12000,
+      "descripcion": "Pelota de goma resistente para juegos y masticación.",
+      "marca": "PetFun",
+      "especificaciones": "Material: Goma, Diámetro: 10 cm",
+      "colores_disponibles": ["Rojo", "Verde", "Azul"],
+      "img": "src/img/juguete_mascota.jpg",
+      "categoria": "mascotas"
+    },
+    {
+      "_id": "664cab57de649a491dab0e01",
+      "nombre": "Lámpara de Escritorio",
+      "precio": 45000,
+      "descripcion": "Lámpara de escritorio con luz LED y diseño moderno.",
+      "marca": "BrightLight",
+      "especificaciones": "Material: Plástico y metal, Potencia: 5W, Altura: 40 cm",
+      "colores_disponibles": ["Blanco", "Negro", "Azul"],
+      "img": "src/img/lampara_escritorio.jpg",
+      "categoria": "oficina"
+    },
+    {
+      "_id": "664cab57de649a491dab0e02",
+      "nombre": "Impresora HP",
+      "precio": 250000,
+      "descripcion": "Impresora multifuncional HP con capacidad de impresión, escaneo y copia.",
+      "marca": "HP",
+      "especificaciones": "Modelo: DeskJet 2720, Conectividad: WiFi, USB, Velocidad: 7.5 ppm (negro), 5.5 ppm (color)",
+      "colores_disponibles": ["Blanco", "Negro"],
+      "img": "src/img/impresora_hp.jpg",
+      "categoria": "oficina"
+    },
+    {
+      "_id": "664cab57de649a491dab0e03",
+      "nombre": "Kit de Lapiceros",
+      "precio": 12000,
+      "descripcion": "Set de 10 lapiceros de colores variados con tinta suave.",
+      "marca": "PaperMate",
+      "especificaciones": "Material: Plástico, Tipo: Bolígrafo, Colores: 10 colores",
+      "colores_disponibles": ["Multicolor"],
+      "img": "src/img/lapiceros.jpg",
+      "categoria": "oficina"
+    },
+    {
+      "_id": "664cab57de649a491dab0e05",
+      "nombre": "Biberón",
+      "precio": 15000,
+      "descripcion": "Biberón anticólico con capacidad de 250 ml.",
+      "marca": "BabyCare",
+      "especificaciones": "Material: Plástico libre de BPA, Tetina: Silicona, Capacidad: 250 ml",
+      "colores_disponibles": ["Transparente", "Azul", "Rosa"],
+      "img": "src/img/biberon.jpg",
+      "categoria": "para tus hijos"
+    },
+    {
+      "_id": "664cab57de649a491dab0e06",
+      "nombre": "Pañitos Húmedos",
+      "precio": 8000,
+      "descripcion": "Pañitos húmedos para bebé con aloe vera y vitamina E.",
+      "marca": "BabySoft",
+      "especificaciones": "Cantidad: 80 unidades, Sin alcohol, Hipoalergénicos",
+      "colores_disponibles": ["Blanco"],
+      "img": "src/img/panitos_humedos.jpg",
+      "categoria": "para tus hijos"
+    },
+    {
+      "_id": "664cab57de649a491dab0e07",
+      "nombre": "Juguete Bebé",
+      "precio": 25000,
+      "descripcion": "Juguete de peluche con sonidos y texturas para estimular al bebé.",
+      "marca": "PlayKids",
+      "especificaciones": "Material: Tela suave, Dimensiones: 20 cm de altura, Edad recomendada: 0+ meses",
+      "colores_disponibles": ["Multicolor"],
+      "img": "src/img/juguete_bebe.jpg",
+      "categoria": "para tus hijos"
+    }
+  ]
+  

@@ -2,33 +2,31 @@ import mongoose from "mongoose";
 import bcrypt from "bcrypt";
 
 
-const usuarioSchema = mongoose.Schema({
-    nombre: {
-        type: String,
-        required: true,
-        trim: true
+const usuarioSchema = mongoose.Schema(
+    {
+        nombre: {
+            type: String,
+            required: true,
+            trim: true
+        },
+        password: {
+            type: String,
+            required: true,
+            trim: true
+        }, 
+        email: {
+            type: String,
+            require: true,
+            trim: true,
+            unique: true,
+        },
+        token: {
+            type: String,
+        },
     },
-    password: {
-        type: String,
-        required: true,
-        trim: true
-    }, 
-    email: {
-        type: String,
-        require: true,
-        trim: true,
-        unique: true,
-    },
-    token: {
-        type: String,
-    },
-    confirmado: {
-        type: Boolean,
-        default: false,
-    },
-},
     {
         timestamps: true,
+        _id: { auto: true }
     }
 
 );

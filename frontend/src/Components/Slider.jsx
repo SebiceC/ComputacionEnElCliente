@@ -4,6 +4,7 @@ import banner1 from '../img/cookies.png';
 import banner2 from '../img/ariel.png';
 import banner3 from '../img/pedigree2.avif';
 import banner4 from '../img/lampara.png';
+import React from 'react';
 
 function MyCarousel() {
   return (

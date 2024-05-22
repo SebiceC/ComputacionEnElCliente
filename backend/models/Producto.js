@@ -27,6 +27,7 @@ const productoSchema = mongoose.Schema({
     },
 }, {
     timestamps: true,
+    _id: { auto: true }
 });
 
 const Producto = mongoose.model('Producto', productoSchema);

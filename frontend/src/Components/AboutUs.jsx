@@ -3,7 +3,7 @@ import NavBar from './NavBar';
 import Footer from './Footer';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTruck, faExchangeAlt, faPercent, faUser } from '@fortawesome/free-solid-svg-icons';
-
+import React from 'react';
 
 
 const AboutUs = () => {

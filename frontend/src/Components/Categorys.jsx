@@ -8,7 +8,7 @@ import category6 from '../img/category_img_10.jpg';
 import category7 from '../img/category_img_11.jpg';
 import category8 from '../img/category_img_12.jpg';
 import { Link } from 'react-router-dom';
-
+import React from 'react';
 const Section = ()=> {
     
     return (

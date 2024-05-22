@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { FaFacebookF, FaInstagram ,FaLinkedinIn,FaTwitter ,FaPhone, FaEnvelope,FaLocationArrow} from 'react-icons/fa';
-
+import React from 'react';
 function Footer() {
   return (
     <footer className="bg-dark" id="tempaltemo_footer">

@@ -14,13 +14,14 @@ const Register = () => {
     const [isSuccess, setIsSuccess] = useState(false);
     const navigate = useNavigate();
 
+
     const handleRegister = async (e) => {
         e.preventDefault();
         try {
-          const response = await axios.post('http://localhost:7500/api/usuarios/registrar', { nombre: username, email, password });
-          alert('Registro exitoso');
-          console.log(response.data); 
+          const response = await axios.post('http://localhost:4000/api/usuarios/', { nombre: username, email, password });
           setIsSuccess(true);
+          alert(response.data.msg);
+          console.log(response.data); 
           navigate('/'); 
         } catch (error) {
             if (error.response && error.response.data && error.response.data.msg) {
@@ -37,43 +38,45 @@ const Register = () => {
     };
 
   return (
-    <div className="login-content">
-        <h2><FaUser className='icon'/>Register</h2>
-        <div className="message">
-            <div className="line"></div> 
-            Registrate aquí 
-            <div className="line"></div>
-        </div>
+    <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
+      <div className="login-content">
+          <h2><FaUser className='icon'/>Register</h2>
+          <div className="message">
+              <div className="line"></div> 
+              Registrate aquí 
+              <div className="line"></div>
+          </div>
 
-        {message && (
-                <div style={messageStyle}>
-                    {message}
-                </div>
-            )}
+          {message && (
+                  <div style={messageStyle}>
+                      {message}
+                  </div>
+              )}
 
-        <input 
-          className="login-input"
-          type="text" 
-          placeholder="Username" 
-          value={username}
-          onChange={(e) => setUsername(e.target.value)}
-        />
-        <input 
-          className="login-input" 
-          type="email" 
-          placeholder="Email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
+          <input 
+            className="login-input"
+            type="text" 
+            placeholder="Username" 
+            value={username}
+            onChange={(e) => setUsername(e.target.value)}
           />
-        <input 
-          className="login-input" 
-          type="password" 
-          placeholder="Contraseña" 
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-        />
+          <input 
+            className="login-input" 
+            type="email" 
+            placeholder="Email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            />
+          <input 
+            className="login-input" 
+            type="password" 
+            placeholder="Contraseña" 
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+          />
 
-        <button className="login-button" onClick={handleRegister}>Iniciar sesión</button>
+          <button className="login-button" onClick={handleRegister}>Iniciar sesión</button>
+      </div>
     </div>
   );
 };
