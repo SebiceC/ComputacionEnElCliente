@@ -98,9 +98,6 @@ const Login = ({ isOpen, onClose, setIsLoggedIn }) => {
         />
 
         <button className="login-button" onClick={handleLogin}>Iniciar sesión</button>
-        <div className="forgot-password">
-          <Link to="/olvide-password">¿Olvidaste tu contraseña?</Link>
-        </div>
         <div className="create-account">
           ¿No tienes una cuenta? <Link to="/Register">Crear aquí</Link>
         </div>

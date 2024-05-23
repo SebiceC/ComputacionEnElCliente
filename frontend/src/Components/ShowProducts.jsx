@@ -115,9 +115,7 @@ const ShopFilter = () => {
                     <div key={producto._id} className="col-lg-6 col-md-6 col-sm-6 pb-5">
                       <div className="product-item bg-light mb-2" style={{ width: '90%', height: '90%' }}>
                         <div className="product-img position-relative overflow-hidden text-center">
-                          <Link to={`/producto/${producto._id}`}>
-                            <img className="img-fluid" src={`/${producto.img}`} alt={producto.nombre} style={{ maxWidth: '60%', maxHeight: '60%', display: 'inline-block' }} />
-                          </Link>
+                        <img className="img-fluid" src={`/${producto.img}`} alt={producto.nombre} style={{ maxWidth: '60%', maxHeight: '60%', display: 'inline-block' }} />
                         </div>
                         <div className="text-center py-4">
                           <h5 className="h5 text-truncate">{producto.nombre}</h5>
